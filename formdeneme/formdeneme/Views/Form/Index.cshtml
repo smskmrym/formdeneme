@@ -1,0 +1,39 @@
+﻿@model Form
+
+@{
+    ViewData["Title"] = "Form Try Page";
+}
+
+@Html.Initialize("Welcome to Form Try Page")
+
+<br />
+<br />
+@using (Html.BeginForm())
+{
+
+
+    @Html.DisplayNameFor(b => b.Title)
+    <br />
+    @Html.TextBoxFor(b => b.Title, Model.Title)
+    <br />
+    @Html.DisplayNameFor(b => b.Description)
+    <br />
+    @Html.TextBoxFor(b => b.Description, Model.Description)
+    <br />
+    @Html.DisplayNameFor(b => b.SamplePage)
+    <br />
+    @Html.TextBoxFor(b => b.SamplePage, Model.SamplePage)
+    <br />
+    @Html.DisplayNameFor(b => b.AuthorEmail)
+    <br />
+    @Html.TextBoxFor(b => b.AuthorEmail, Model.AuthorEmail)
+    <br />
+    @Html.DisplayNameFor(b => b.AuthorPhone)
+    <br />
+    @Html.TextBoxFor(b => b.AuthorPhone, Model.AuthorPhone)
+    <br />
+    <input type="submit" value="Submit" />
+    <br />
+
+    //@Html.DisplayForModel()
+}
